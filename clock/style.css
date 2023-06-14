@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background:linear-gradient(to right, #fc0000, #3902ff);
+}
+.light{
+    transition: 1s;
+    --background : #ddd;   
+}
+.dark{
+    transition: 1s;
+    --background : #464646;
+}
+.mainBox{
+    width:300px !important;
+    height: 550px !important;
+    background:var(--background);
+    box-shadow:0px 19px 38px rgba(0, 0, 0, 0.3), 0px 15px 12px rgba(0, 0, 0, 0.22);
+    padding: 20px;
+}
+.clockbox{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 10px auto;
+    background-color: #FF00FF;
+    border-radius: 50%;
+}
+.clockbox::before{
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--background);
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.301);
+}
+.clockbox::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: black;
+}
+.min, .hr,.sec{
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+}
+.min{
+    height: 100px;
+    width: 4px;
+    background: black;
+    margin: auto;
+    top: 3%;
+    left: 49%;
+    border-radius: 2%;
+}
+.hr{
+    height: 70px;
+    width: 5px;
+    background-color: black;
+    margin: auto;
+    top: 18%;
+    left: 49.5%;
+    border-radius: 2%;
+}
+.sec{
+    height: 110px;
+    width: 2px;
+    background: black;
+    top: 0%;
+    left: 49.5%;
+    border-radius: 2%; 
+}
+.med{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    color: #FF00FF;
+}
+.info{
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.digitalHours{
+    font-size: 25px;
+    color: #FF00FF;
+    margin-top: 20px;
+    align-items: center;
+}
+.basic{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.basic .city{
+    font-size: 38px;
+    font-weight: bold;
+    color: #FF00FF;
+}
+.basic .date{
+    margin-top: 5px;
+    color: #FF00FF;
+    font-size: 15px;
+}
+.mode{
+    color: yellow;
+    font-size: 35px;
+    border: none;
+    outline: none;
+    margin-top: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
